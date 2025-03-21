@@ -462,10 +462,10 @@ const MortgageComparisonCalculator = () => {
       const dataPoint = { 
         year: i + 1,
         scenarioA: i < comparison.scenarioA.amortizationSchedule.length 
-          ? (comparison.scenarioA.amortizationSchedule[i] as any).endingBalance 
+          ? comparison.scenarioA.amortizationSchedule[i].endingBalance 
           : 0,
         scenarioB: i < comparison.scenarioB.amortizationSchedule.length 
-          ? (comparison.scenarioB.amortizationSchedule[i] as any).endingBalance 
+          ? comparison.scenarioB.amortizationSchedule[i].endingBalance 
           : 0
       };
       
